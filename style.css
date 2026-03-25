@@ -1,0 +1,96 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: #0b1a0b;
+  color: #eef7ee;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+canvas#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.85));
+  backdrop-filter: blur(4px);
+}
+
+.panel {
+  width: min(420px, calc(100vw - 32px));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 18px 18px 14px;
+  background: rgba(18, 28, 18, 0.85);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+}
+
+.panel h1 {
+  margin: 2px 0 12px;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0;
+  font-size: 13px;
+  color: rgba(238, 247, 238, 0.9);
+}
+
+input {
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.22);
+  color: #eef7ee;
+  outline: none;
+}
+
+input[type="color"] {
+  padding: 0;
+  height: 44px;
+  width: 100%;
+}
+
+button {
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.1);
+  color: #eef7ee;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.muted {
+  opacity: 0.75;
+}
+
+.small {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+}
+

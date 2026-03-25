@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multiplayer 2D Sandbox</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <!-- Join overlay -->
+    <div id="overlay">
+      <div class="panel">
+        <h1>Join</h1>
+        <label>
+          Username
+          <input id="username" maxlength="16" placeholder="Player" autocomplete="off" />
+        </label>
+        <label>
+          Color
+          <input id="color" type="color" value="#ffffff" />
+        </label>
+        <div class="row">
+          <button id="join">Play</button>
+          <span id="status" class="muted"></span>
+        </div>
+        <p class="muted small">Controls: WASD / Arrows, Mouse Wheel to zoom.</p>
+        <p class="muted small">
+          If hosting client separately, pass a WebSocket URL via
+          <code>?ws=wss://yourserver.example/ws</code>.
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
+
